@@ -13,7 +13,7 @@ body {
 
 /* Header */
 header {
-    background-color: #2c3e50;
+    background-color: #34495e;
     padding: 20px;
     text-align: center;
     color: white;
@@ -26,7 +26,7 @@ header {
 }
 
 .navbar .logo h1 {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 .navbar nav ul {
@@ -41,18 +41,18 @@ header {
 .navbar nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding: 5px 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
-    background-color: #3498db;
+    background-color: #2980b9;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('https://via.placeholder.com/1920x700');
+    background-image: url('https://via.placeholder.com/1920x800');
     background-size: cover;
     background-position: center;
     color: white;
@@ -61,63 +61,111 @@ header {
 }
 
 .hero h2 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-bottom: 30px;
 }
 
 .cta-button {
-    background-color: #3498db;
+    background-color: #2980b9;
     color: white;
-    padding: 10px 20px;
-    font-size: 1.2em;
+    padding: 15px 30px;
+    font-size: 1.3em;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #2980b9;
+    background-color: #3498db;
 }
 
-/* Services Section */
-.services {
+/* Categories Section */
+.categories {
+    padding: 60px 20px;
     text-align: center;
-    padding: 50px 20px;
+    background-color: #ecf0f1;
 }
 
-.services h2 {
+.categories h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
 }
 
-.service-item {
-    margin: 20px 0;
+.category-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.service-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+.category {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.service-item p {
-    font-size: 1.2em;
-    color: #555;
+.category img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.category:hover img {
+    transform: scale(1.1);
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category:hover .category-overlay {
+    opacity: 1;
+}
+
+.category-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #2980b9;
 }
 
 /* About Section */
 .about {
-    background-color: #ecf0f1;
-    padding: 50px 20px;
+    background-color: #f4f4f4;
+    padding: 60px 20px;
     text-align: center;
 }
 
 .about h2 {
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .about p {
@@ -127,7 +175,7 @@ header {
 
 /* Contact Section */
 .contact {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -139,28 +187,30 @@ header {
 
 .contact input, .contact textarea {
     width: 80%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .contact button {
-    padding: 10px 20px;
-    background-color: #3498db;
+    padding: 12px 25px;
+    background-color: #2980b9;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
-    background-color: #2980b9;
+    background-color: #3498db;
 }
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
+    background-color: #34495e;
     color: white;
     padding: 20px;
     text-align: center;
