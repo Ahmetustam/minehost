@@ -96,4 +96,67 @@
         <img src="https://i.imgur.com/8O2g5df.gif" alt="Gif" />
     </div>
 </section>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğrulama Örneği</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        
+        #verificationMessage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            display: none;
+        }
+        
+        #verificationMessage button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
 
+        #verificationMessage button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="verificationMessage">
+        <p>Hoş geldiniz! Bu sayfayı ilk kez ziyaret ediyorsunuz.</p>
+        <button id="closeMessage">Tamam</button>
+    </div>
+
+    <h1>Site İçeriği</h1>
+    <p>Bu, tarayıcıda doğrulama eklediğiniz bir örnek sayfadır.</p>
+
+    <script>
+        // Tarayıcıda 'visited' anahtarını kontrol et
+        if (!localStorage.getItem('visited')) {
+            // Eğer kullanıcı ilk kez geliyorsa, doğrulama mesajını göster
+            document.getElementById('verificationMessage').style.display = 'block';
+        }
+
+        // Kullanıcı 'Tamam' butonuna tıkladığında doğrulama mesajını gizle
+        document.getElementById('closeMessage').addEventListener('click', function() {
+            document.getElementById('verificationMessage').style.display = 'none';
+            // 'visited' anahtarını kaydet, böylece kullanıcı tekrar gelirse mesaj görünmez
+            localStorage.setItem('visited', 'true');
+        });
+    </script>
+</body>
+</html>
