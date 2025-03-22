@@ -251,18 +251,4 @@ header, section, footer {
 
 button#theme-toggle:hover {
     background-color: #16a085;
-}
-body {
-    background: linear-gradient(45deg, #ff6b6b, #f5f5f5);
-    animation: backgroundAnimation 5s infinite alternate;
-}
-
-@keyframes backgroundAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
 
