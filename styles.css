@@ -119,3 +119,28 @@ footer {
 footer p {
     font-size: 1rem;
 }
+#testimonials {
+    background-color: #ecf0f1;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.testimonial-item {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
