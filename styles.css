@@ -1,6 +1,6 @@
-/* Genel Stil */
+/* Genel stil */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -10,11 +10,12 @@ body {
 header {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
 }
@@ -51,11 +52,11 @@ header .nav-links li a:hover {
 
 /* Hero Section */
 #hero {
-  background: url('assets/hero-background.jpg') center center no-repeat;
-  background-size: cover;
+  background: url('assets/hero-background.jpg') center/cover no-repeat;
   color: white;
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
+  background-attachment: fixed;
 }
 
 .hero-content {
@@ -63,10 +64,20 @@ header .nav-links li a:hover {
   margin: 0 auto;
 }
 
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
 .cta-button {
   background-color: #5c6bc0;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 18px;
@@ -80,6 +91,7 @@ header .nav-links li a:hover {
 #hosting-plans {
   padding: 50px 20px;
   text-align: center;
+  background-color: #fff;
 }
 
 #hosting-plans h2 {
@@ -89,35 +101,41 @@ header .nav-links li a:hover {
 
 .plans-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20px;
 }
 
 .plan {
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 30%;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .plan:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
 }
 
 .plan h3 {
-  font-size: 24px;
+  font-size: 28px;
   color: #333;
+  margin-bottom: 10px;
+}
+
+.plan p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .plan .btn {
   background-color: #5c6bc0;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
+  font-size: 16px;
 }
 
 .plan .btn:hover {
@@ -127,7 +145,7 @@ header .nav-links li a:hover {
 /* About Section */
 #about {
   padding: 50px 20px;
-  background-color: #f0f0f0;
+  background-color: #f8f8f8;
   text-align: center;
 }
 
@@ -142,7 +160,7 @@ header .nav-links li a:hover {
   margin: 0 auto;
 }
 
-/* Contact Form */
+/* Contact Section */
 #contact {
   padding: 50px 20px;
   text-align: center;
@@ -160,9 +178,10 @@ header .nav-links li a:hover {
 #contact form button {
   background-color: #5c6bc0;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 25px;
   border: none;
   cursor: pointer;
+  font-size: 16px;
 }
 
 #contact form button:hover {
@@ -173,7 +192,7 @@ header .nav-links li a:hover {
 #faq {
   padding: 50px 20px;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #fff;
 }
 
 .faq-item {
@@ -195,5 +214,5 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
 }
