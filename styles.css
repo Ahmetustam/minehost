@@ -186,4 +186,33 @@ button#theme-toggle {
 button#theme-toggle:hover {
     background-color: #16a085;
 }
+/* Varsayılan gündüz modu */
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Gece modu */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Gece/Gündüz buton stili */
+button#theme-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#theme-toggle:hover {
+    background-color: #16a085;
+}
 
