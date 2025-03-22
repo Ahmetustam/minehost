@@ -143,4 +143,25 @@ footer p {
     font-size: 1rem;
     color: #555;
 }
+/* Bot özelliklerine animasyon ekleyelim */
+.feature-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.feature-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sayfa kaydırıldıkça görünür yapalım */
+window.addEventListener('scroll', () => {
+    const features = document.querySelectorAll('.feature-item');
+    features.forEach(feature => {
+        if (window.scrollY + window.innerHeight > feature.offsetTop + feature.clientHeight / 2) {
+            feature.classList.add('visible');
+        }
+    });
+});
 
