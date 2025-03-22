@@ -14,58 +14,104 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header .logo img {
   max-width: 150px;
 }
 
-header nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
+header nav {
+  flex-grow: 1;
+  text-align: right;
 }
 
+header .nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header .nav-links li {
+  display: inline;
+  margin-left: 20px;
+}
+
+header .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .nav-links li a:hover {
+  color: #5c6bc0;
+}
+
+/* Hero Section */
 #hero {
+  background: url('assets/hero-background.jpg') center center no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-button {
   background-color: #5c6bc0;
   color: white;
-  text-align: center;
-  padding: 50px 0;
-}
-
-#hero .cta-button {
-  background-color: #fff;
-  color: #333;
   padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
   font-size: 18px;
 }
 
+.cta-button:hover {
+  background-color: #3f4d8b;
+}
+
+/* Hosting Plans */
 #hosting-plans {
+  padding: 50px 20px;
   text-align: center;
-  padding: 50px 0;
 }
 
-#hosting-plans .plans-container {
+#hosting-plans h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.plans-container {
   display: flex;
-  justify-content: space-around;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-#hosting-plans .plan {
+.plan {
   background-color: white;
-  border-radius: 8px;
   padding: 20px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 30%;
+  transition: transform 0.3s;
 }
 
-#hosting-plans .plan h3 {
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan h3 {
+  font-size: 24px;
   color: #333;
 }
 
-#hosting-plans .plan .btn {
+.plan .btn {
   background-color: #5c6bc0;
   color: white;
   padding: 10px 20px;
@@ -74,14 +120,77 @@ header nav a {
   margin-top: 20px;
 }
 
-#contact form input, #contact form textarea {
+.plan .btn:hover {
+  background-color: #3f4d8b;
+}
+
+/* About Section */
+#about {
+  padding: 50px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact Form */
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#contact form input,
+#contact form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
+#contact form button {
+  background-color: #5c6bc0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#contact form button:hover {
+  background-color: #3f4d8b;
+}
+
+/* FAQ Section */
+#faq {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 24px;
+}
+
+.faq-item p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer */
 footer {
   background-color: #333;
   color: white;
