@@ -1,96 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Discord Bot</title>
+    <title>Discord Botum</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>My Discord Bot</h1>
-            <p>The best bot for your Discord server!</p>
+            <h1>Discord Botum</h1>
+            <p>Discord sunucunuz için en iyi bot!</p>
         </div>
         <nav>
             <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#invite">Invite</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#features">Özellikler</a></li>
+                <li><a href="#invite">Davet Et</a></li>
+                <li><a href="#about">Hakkında</a></li>
             </ul>
-<button id="theme-toggle">Switch to Dark Mode</button>
-
+            <button id="theme-toggle">Karanlık Mod'a Geç</button>
         </nav>
     </header>
-<section id="testimonials">
-    <h2>What Users Say</h2>
-    <div class="testimonial-list">
-        <div class="testimonial-item">
-            <p>"This bot is amazing! It makes managing my server so much easier."</p>
-            <p>- User1</p>
+
+    <section id="testimonials">
+        <h2>Kullanıcılar Ne Diyor?</h2>
+        <div class="testimonial-list">
+            <div class="testimonial-item">
+                <p>"Bu bot harika! Sunucumu yönetmek çok daha kolay hale geldi."</p>
+                <p>- Kullanıcı1</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"Eğlenceli komutları çok seviyorum, sunucumu canlı tutuyor!"</p>
+                <p>- Kullanıcı2</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"En iyi moderasyon botu! Birçok kullanışlı araç tek bir botta."</p>
+                <p>- Kullanıcı3</p>
+            </div>
         </div>
-        <div class="testimonial-item">
-            <p>"I love the fun commands, it keeps my server active and entertaining!"</p>
-            <p>- User2</p>
-        </div>
-        <div class="testimonial-item">
-            <p>"Best moderation bot ever! So many useful tools in one bot."</p>
-            <p>- User3</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <section id="hero">
         <div class="hero-content">
-            <h2>Enhance Your Discord Experience</h2>
-            <p>Our bot brings fun and productivity to your server. Get started now!</p>
-            <a href="#invite" class="btn">Invite Now</a>
+            <h2>Discord Deneyiminizi Geliştirin</h2>
+            <p>Botumuz, sunucunuza eğlence ve verimlilik katıyor. Hemen başlayın!</p>
+            <a href="#invite" class="btn">Şimdi Davet Et</a>
         </div>
     </section>
 
     <section id="features">
-        <h2>Bot Features</h2>
+        <h2>Bot Özellikleri</h2>
         <div class="feature-list">
             <div class="feature-item">
-                <h3>Custom Commands</h3>
-                <p>Create your own commands to make the bot more interactive.</p>
+                <h3>Özel Komutlar</h3>
+                <p>Kendi komutlarınızı oluşturarak botu daha etkileşimli hale getirin.</p>
             </div>
             <div class="feature-item">
-                <h3>Fun & Games</h3>
-                <p>Enjoy a variety of fun commands like trivia and mini-games!</p>
+                <h3>Eğlence ve Oyunlar</h3>
+                <p>Çeşitli eğlenceli komutlar ve mini oyunlar ile eğlenin!</p>
             </div>
             <div class="feature-item">
-                <h3>Moderation Tools</h3>
-                <p>Manage your server with ease using advanced moderation commands.</p>
+                <h3>Moderasyon Araçları</h3>
+                <p>Gelişmiş moderasyon komutları ile sunucunuzu kolayca yönetin.</p>
             </div>
         </div>
     </section>
 
     <section id="invite">
-        <h2>Invite the Bot</h2>
-        <p>Click the button below to add the bot to your Discord server!</p>
-        <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=bot" class="btn">Invite Now</a>
+        <h2>Botu Davet Et</h2>
+        <p>Botu Discord sunucunuza eklemek için aşağıdaki butona tıklayın!</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=bot" class="btn">Şimdi Davet Et</a>
     </section>
 
     <section id="about">
-        <h2>About the Bot</h2>
-        <p>My Discord Bot is designed to provide a seamless and interactive experience for Discord users. Whether you're looking to moderate your server, play games, or automate tasks, My Discord Bot has got you covered!</p>
+        <h2>Bot Hakkında</h2>
+        <p>Discord Botum, Discord kullanıcıları için sorunsuz ve etkileşimli bir deneyim sağlamak üzere tasarlanmıştır. Sunucunuzda moderasyon yapın, oyunlar oynayın veya görevleri otomatikleştirin, Discord Botum her konuda size yardımcı olur!</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 My Discord Bot | Designed with ❤️</p>
+        <p>&copy; 2025 Discord Botum | ❤️ ile tasarlandı</p>
     </footer>
+
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const button = document.getElementById('theme-toggle');
+            if (document.body.classList.contains('dark-mode')) {
+                button.innerText = "Açık Mod'a Geç";
+            } else {
+                button.innerText = "Karanlık Mod'a Geç";
+            }
+        });
+    </script>
 </body>
 </html>
-<script>
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const button = document.getElementById('theme-toggle');
-        if (document.body.classList.contains('dark-mode')) {
-            button.innerText = "Switch to Light Mode";
-        } else {
-            button.innerText = "Switch to Dark Mode";
-        }
-    });
-</script>
