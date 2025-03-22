@@ -1,218 +1,33 @@
-/* Genel stil */
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 20px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 100;
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-header .logo img {
-  max-width: 150px;
-}
-
-header nav {
-  flex-grow: 1;
-  text-align: right;
-}
-
-header .nav-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-header .nav-links li {
-  display: inline;
-  margin-left: 20px;
-}
-
-header .nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header .nav-links li a:hover {
-  color: #5c6bc0;
-}
-
-/* Hero Section */
-#hero {
-  background: url('assets/hero-background.jpg') center/cover no-repeat;
-  color: white;
-  padding: 120px 20px;
-  text-align: center;
-  background-attachment: fixed;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.cta-button {
-  background-color: #5c6bc0;
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 18px;
-}
-
-.cta-button:hover {
-  background-color: #3f4d8b;
-}
-
-/* Hosting Plans */
-#hosting-plans {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-#hosting-plans h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.plans-container {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.plan {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  transition: transform 0.3s ease;
-}
-
-.plan:hover {
-  transform: translateY(-10px);
-}
-
-.plan h3 {
-  font-size: 28px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.plan p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.plan .btn {
-  background-color: #5c6bc0;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.plan .btn:hover {
-  background-color: #3f4d8b;
-}
-
-/* About Section */
-#about {
-  padding: 50px 20px;
-  background-color: #f8f8f8;
-  text-align: center;
-}
-
-#about h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-#about p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Contact Section */
-#contact {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#contact form input,
-#contact form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-#contact form button {
-  background-color: #5c6bc0;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#contact form button:hover {
-  background-color: #3f4d8b;
-}
-
-/* FAQ Section */
-#faq {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-.faq-item {
-  margin-bottom: 20px;
-}
-
-.faq-item h3 {
-  font-size: 24px;
-}
-
-.faq-item p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Footer */
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #2C3E50;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
