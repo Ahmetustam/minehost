@@ -9,19 +9,25 @@
 <body>
   <header>
     <div class="logo">
-      <img src="assets/logo.png" alt="Logo" width="150">
+      <img src="assets/logo.png" alt="Hosting Logo" width="150">
     </div>
     <nav>
-      <a href="#hosting-plans">Hosting Paketleri</a>
-      <a href="#about">Hakkında</a>
-      <a href="#contact">İletişim</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Ana Sayfa</a></li>
+        <li><a href="#hosting-plans">Paketler</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#contact">İletişim</a></li>
+        <li><a href="#faq">SSS</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="hero">
-    <h1>Web Hosting Paketleriyle Web Sitenizi Başlatın!</h1>
-    <p>Web sitenizi barındıracak güvenilir ve hızlı hosting paketleri sunuyoruz.</p>
-    <a href="#hosting-plans" class="cta-button">Paketleri Gör</a>
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Web Siteniz İçin En İyi Hosting Çözümleri</h1>
+      <p>Hızlı, güvenli ve yüksek performanslı web hosting hizmetleri ile tanışın.</p>
+      <a href="#hosting-plans" class="cta-button">Paketleri Görüntüle</a>
+    </div>
   </section>
 
   <section id="hosting-plans">
@@ -48,20 +54,32 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" class="about">
     <h2>Biz Kimiz?</h2>
-    <p>Biz, yüksek kaliteli web hosting hizmetleri sunan bir şirketiz. Müşterilerimize güvenilir, hızlı ve güvenli hosting çözümleri sağlamaktan gurur duyuyoruz.</p>
+    <p>Biz, yüksek kaliteli ve güvenilir hosting çözümleri sunan bir şirketiz. Müşterilerimize web sitelerini en verimli şekilde barındırabilmeleri için her zaman en iyi hizmeti sunmayı amaçlıyoruz.</p>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="contact">
     <h2>İletişim</h2>
-    <p>Bizimle iletişime geçmek için aşağıdaki formu kullanabilirsiniz.</p>
+    <p>Bizimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.</p>
     <form id="contact-form">
       <input type="text" placeholder="Adınız" required>
       <input type="email" placeholder="E-posta" required>
       <textarea placeholder="Mesajınız" required></textarea>
       <button type="submit">Gönder</button>
     </form>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>Sıkça Sorulan Sorular</h2>
+    <div class="faq-item">
+      <h3>Hosting Paketleri Nelerdir?</h3>
+      <p>Hosting paketlerimiz; Basic, Premium ve VPS olmak üzere üç farklı seçenekle sunulmaktadır.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Nasıl Satın Alabilirim?</h3>
+      <p>Web sitemiz üzerinden istediğiniz paketi seçip, sipariş verebilirsiniz.</p>
+    </div>
   </section>
 
   <footer>
