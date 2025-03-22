@@ -10,9 +10,34 @@ header {
   padding: 20px;
   text-align: center;
 }
+button {
+  padding: 10px 20px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #3f4d8b;
+}
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+.product {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
 footer {
+  text-align: center;
   background-color: #333;
   color: white;
   padding: 10px;
-  text-align: center;
+  margin-top: 20px;
 }
