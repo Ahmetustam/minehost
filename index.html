@@ -1,30 +1,81 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benim Web Sitem</title>
+    <title>Ocean İnternet ve Bilişim Hizmetleri</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- Header Section -->
     <header>
-        <h1>Hoşgeldiniz!</h1>
-        <p>Web siteme hoş geldiniz. Burada proje hakkında bilgi alabilirsiniz.</p>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Ocean</h1>
+                <p>İnternet ve Bilişim Hizmetleri</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Anasayfa</a></li>
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Projelerim</h2>
-            <ul>
-                <li><a href="#">Proje 1</a></li>
-                <li><a href="#">Proje 2</a></li>
-                <li><a href="#">Proje 3</a></li>
-            </ul>
-        </section>
-    </main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Geleceği Bugün İnşa Edin</h2>
+            <p>Teknolojiye yön veren çözümlerimizle işinizi güçlendirin.</p>
+            <a href="#services" class="cta-button">Hizmetlerimizi Gör</a>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Hizmetlerimiz</h2>
+        <div class="service-item">
+            <h3>Web Tasarım</h3>
+            <p>Modern ve kullanıcı dostu web siteleri tasarlıyoruz.</p>
+        </div>
+        <div class="service-item">
+            <h3>Yazılım Geliştirme</h3>
+            <p>İhtiyacınıza özel yazılım çözümleri sunuyoruz.</p>
+        </div>
+        <div class="service-item">
+            <h3>Bulut Hizmetleri</h3>
+            <p>Verilerinizi güvenli ve hızlı bulut ortamlarında saklıyoruz.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Hakkımızda</h2>
+        <p>Ocean İnternet ve Bilişim Hizmetleri olarak, müşterilerimize teknoloji dünyasında güçlü bir yer edinmelerine yardımcı oluyoruz. 10 yılı aşkın süredir sektördeki deneyimimizle, yenilikçi çözümler sunuyoruz.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>İletişim</h2>
+        <form>
+            <input type="text" placeholder="Adınız" required>
+            <input type="email" placeholder="E-posta" required>
+            <textarea placeholder="Mesajınız" required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <p>© 2025 Benim Web Sitem</p>
+        <p>&copy; 2025 Ocean İnternet ve Bilişim Hizmetleri</p>
     </footer>
+
 </body>
+
 </html>
