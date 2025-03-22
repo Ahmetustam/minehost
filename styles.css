@@ -164,4 +164,26 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+/* Gece modu için stil */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+button#theme-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#theme-toggle:hover {
+    background-color: #16a085;
+}
 
