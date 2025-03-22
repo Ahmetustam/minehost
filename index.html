@@ -76,6 +76,21 @@
                 padding: 10px 20px;
             }
         }
+        /* Kategoriler gizli */
+        .categories {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #2e2e3e;
+            border-radius: 12px;
+        }
+        .categories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .categories li {
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -87,9 +102,11 @@
         <a href="https://discord.gg/EwKY8VthWu" class="btn">💬 Destek Sunucusu</a>
     </div>
     
-    <div class="section">
+    <button class="btn" onclick="toggleCategories()">📌 Kategorileri Göster</button>
+    
+    <!-- Kategoriler Bölümü -->
+    <div class="categories" id="categories">
         <h2>📌 Kategoriler</h2>
-        <p>Botumuz aşağıdaki özellikleri sunar:</p>
         <ul>
             <li>🎮 Oyun komutları</li>
             <li>📢 Moderasyon araçları</li>
@@ -115,5 +132,17 @@
             <img src="https://i.imgur.com/8O2g5df.gif" alt="Eğlenceli GIF" width="200">
         </div>
     </div>
+
+    <script>
+        // Kategorileri göster/gizle fonksiyonu
+        function toggleCategories() {
+            var categories = document.getElementById('categories');
+            if (categories.style.display === "none" || categories.style.display === "") {
+                categories.style.display = "block";
+            } else {
+                categories.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
