@@ -4,145 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Botum</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background: linear-gradient(to right, #1e1e2e, #3a3a4b);
-            color: white;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 30px;
-            background: #2a2a3a;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 1s ease-in-out;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #5865F2;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            margin: 10px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #4752C4;
-            transform: scale(1.05);
-        }
-        .section {
-            margin-top: 40px;
-            padding: 20px;
-            background: #2e2e3e;
-            border-radius: 12px;
-        }
-        .footer {
-            margin-top: 50px;
-            padding: 20px;
-            background: #18181b;
-            color: #888;
-            font-size: 14px;
-            border-radius: 12px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .gif-container {
-            margin-top: 20px;
-        }
-        .logo {
-            width: 120px;
-            margin-bottom: 20px;
-        }
-        /* Mobile Responsiveness */
-        @media screen and (max-width: 768px) {
-            .container {
-                padding: 20px;
-                max-width: 100%;
-            }
-            .logo {
-                width: 80px;
-            }
-            .btn {
-                font-size: 14px;
-                padding: 10px 20px;
-            }
-        }
-        /* Kategoriler gizli */
-        .categories {
-            display: none;
-            margin-top: 20px;
-            padding: 20px;
-            background: #2e2e3e;
-            border-radius: 12px;
-        }
-        .categories ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .categories li {
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <img src="https://example.com/bot-logo.png" alt="Bot Logo" class="logo">
-        <h1>✨ Discord Botum ✨</h1>
-        <p>Sunucuna eğlence ve fayda katacak mükemmel bir bot!</p>
-        <a href="https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot&permissions=8" class="btn">➕ Beni Sunucuna Ekle</a>
-        <a href="https://discord.gg/EwKY8VthWu" class="btn">💬 Destek Sunucusu</a>
-    </div>
-    
-    <button class="btn" onclick="toggleCategories()">📌 Özellikleri Göster</button>
-    
-    <!-- Özellikler -->
-    <div class="categories" id="categories">
-        <h2>📌 Özellikler</h2>
+    <header>
+        <h1>Discord Botum</h1>
+        <p>Botunun ismini ve açıklamasını buraya ekle!</p>
+    </header>
+    <section>
+        <h2>Bot Özellikleri</h2>
         <ul>
-            <li>🎮 Oyun komutları</li>
-            <li>📢 Moderasyon araçları</li>
-            <li>🎶 Müzik çalma desteği</li>
-            <li>🤖 Eğlence komutları</li>
+            <li>Özellik 1: Örnek açıklama</li>
+            <li>Özellik 2: Örnek açıklama</li>
+            <li>Özellik 3: Örnek açıklama</li>
         </ul>
-    </div>
-    
-    <div class="section">
-        <h2>🎟️ Ticket </h2>
-        <p>Destek almak için bir ticket açabilirsiniz!</p>
-        <a href="https://discord.gg/EwKY8VthWu" class="btn">🎫 Ticket Aç</a>
-    </div>
-    
-    <div class="section">
-        <h2>ℹ️ Hakkımızda</h2>
-        <p>Bu bot, Discord sunucularını daha eğlenceli ve yönetilebilir hale getirmek için tasarlanmıştır.</p>
-    </div>
-    
-    <div class="footer">
-        <p>© 2025 LISANCE Minehost <strong>Ahmet K.</strong></p>
-        <div class="gif-container">
-            <img src="https://i.imgur.com/8O2g5df.gif" alt="Eğlenceli GIF" width="200">
-        </div>
-    </div>
-
-    <script>
-        // Kategorileri göster/gizle fonksiyonu
-        function toggleCategories() {
-            var categories = document.getElementById('categories');
-            if (categories.style.display === "none" || categories.style.display === "") {
-                categories.style.display = "block";
-            } else {
-                categories.style.display = "none";
-            }
-        }
-    </script>
+    </section>
+    <footer>
+        <p>Botu kullanmak için <a href="https://discord.com/oauth2/authorize?client_id=BOT_ID&scope=bot&permissions=BOT_PERMISSIONS">buraya tıkla</a>.</p>
+    </footer>
 </body>
 </html>
