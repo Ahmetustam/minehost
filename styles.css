@@ -1,310 +1,295 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #2C3E50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header .logo h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-    color: #1abc9c;
-}
-
-#hero {
-    background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-#hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-#hero p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-}
-
-#hero .btn {
-    background-color: #1abc9c;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-#hero .btn:hover {
-    background-color: #16a085;
-}
-
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#features .feature-list {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-#features .feature-item {
-    background-color: #ecf0f1;
-    padding: 30px;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#features .feature-item h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-}
-
-#features .feature-item p {
-    font-size: 1.1rem;
-}
-
-footer {
-    background-color: #2C3E50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    font-size: 1rem;
-}
-#testimonials {
-    background-color: #ecf0f1;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.testimonial-list {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.testimonial-item {
-    background-color: white;
-    padding: 20px;
-    width: 30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-item p {
-    font-size: 1rem;
-    color: #555;
-}
-/* Bot özelliklerine animasyon ekleyelim */
-.feature-item {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.feature-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Sayfa kaydırıldıkça görünür yapalım */
-window.addEventListener('scroll', () => {
-    const features = document.querySelectorAll('.feature-item');
-    features.forEach(feature => {
-        if (window.scrollY + window.innerHeight > feature.offsetTop + feature.clientHeight / 2) {
-            feature.classList.add('visible');
-        }
-    });
+//wow
+wow = new WOW({
+    boxClass: "wow",
+    animateClass: "animated",
+    offset: 0,
+    mobile: true,
+    live: true,
 });
-/* Gece modu için stil */
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-button#theme-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: #1abc9c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button#theme-toggle:hover {
-    background-color: #16a085;
-}
-/* Varsayılan gündüz modu */
-body {
-    background-color: #fff;
-    color: #333;
-    font-family: Arial, sans-serif;
-}
-
-/* Gece modu */
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Gece/Gündüz buton stili */
-button#theme-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: #1abc9c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-/* Genel stil */
-body {
-    background-color: #fff;
-    color: #333; /* Açık modda yazı rengi siyah */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Gece modu */
-body.dark-mode {
-    background-color: #333;
-    color: #fff; /* Karanlık modda yazı rengi beyaz */
-}
-
-/* Buton stili */
-button#theme-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: #1abc9c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button#theme-toggle:hover {
-    background-color: #16a085;
-}
-
-/* Diğer stil ve içerik bölümleri için düzenlemeler */
-header, section, footer {
-    padding: 20px;
-}
+wow.init();
+//wow-end
 
 
-button#theme-toggle:hover {
-    background-color: #16a085;
+// MAIN SWLİDER
+var swiper = new Swiper(".mainslider", {
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    }
+});
+// MAINSLİDER END
 
+
+
+//swiper partner
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 5,
+            spaceBetween: 40
+        }
+    }
+});
+// swiper partner
+
+
+
+// dark mode
+// function to set a given theme/color-scheme
+function setTheme(themeName) {
+    localStorage.setItem("theme", themeName);
+    document.documentElement.className = themeName;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+// function to toggle between light and dark theme
+function toggleTheme() {
+    if (localStorage.getItem("theme") === "dark-theme") {
+        setTheme("light-theme");
+        document.getElementById("toggleThemeIcon").classList.add("bx-moon");
+        document.getElementById("toggleThemeIcon").classList.remove("bx-sun");
+    } else {
+        setTheme("dark-theme");
+        document.getElementById("toggleThemeIcon").classList.add("bx-sun");
+        document.getElementById("toggleThemeIcon").classList.remove("bx-moon");
+    }
+}
+// Immediately invoked function to set the theme on initial load
+(function () {
+    if (localStorage.getItem("theme") === "dark-theme") {
+        setTheme("dark-theme");
+        document.getElementById("toggleThemeIcon").classList.add("bx-sun");
+        document.getElementById("toggleThemeIcon").classList.remove("bx-moon");
+    } else {
+        setTheme("light-theme");
+        document.getElementById("toggleThemeIcon").classList.add("bx-moon");
+        document.getElementById("toggleThemeIcon").classList.remove("bx-sun");
+    }
+})();
+//dark-mode-end
+
+
+// backtotop
+var mybutton = document.getElementById("back-to-top");
+window.onscroll = function () {
+    scrollFunction()
+};
+
+var mybutton = document.getElementById("back-to-top");
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
-#profile-section {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+//backtotopend
+
+
+// menu
+const menu = document.querySelector('.menu');
+const menuSection = menu.querySelector('.menu-section');
+const menuArrow = menu.querySelector('.menu-mobile-arrow');
+const menuClosed = menu.querySelector('.menu-mobile-close');
+const menuTrigger = document.querySelector('.menu-mobile-trigger');
+const menuOverlay = document.querySelector('.overlay');
+let subMenu;
+menuSection.addEventListener('click', (e) => {
+    if (!menu.classList.contains('active')) {
+        return;
+    }
+    if (e.target.closest('.menu-item-has-children')) {
+        const hasChildren = e.target.closest('.menu-item-has-children');
+        showSubMenu(hasChildren);
+    }
+});
+menuArrow.addEventListener('click', () => {
+    hideSubMenu();
+});
+menuTrigger.addEventListener('click', () => {
+    toggleMenu();
+});
+menuClosed.addEventListener('click', () => {
+    toggleMenu();
+});
+menuOverlay.addEventListener('click', () => {
+    toggleMenu();
+});
+
+function toggleMenu() {
+    menu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
+function showSubMenu(hasChildren) {
+    subMenu = hasChildren.querySelector('.menu-subs');
+    subMenu.classList.add('active');
+    subMenu.style.animation = 'slideLeft 0.5s ease forwards';
+    const menuTitle = hasChildren.querySelector('i').parentNode.childNodes[0].textContent;
+    menu.querySelector('.menu-mobile-title').innerHTML = menuTitle;
+    menu.querySelector('.menu-mobile-header').classList.add('active');
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+function hideSubMenu() {
+    //subMenu.style.animation = 'slideRight 0.5s ease forwards';
+    setTimeout(() => {
+        subMenu.classList.remove('active');
+    }, 300);
+    menu.querySelector('.menu-mobile-title').innerHTML = '';
+    menu.querySelector('.menu-mobile-header').classList.remove('active');
+}
+window.onresize = function () {
+    if (this.innerWidth > 991) {
+        if (menu.classList.contains('active')) {
+            toggleMenu();
+        }
+    }
+};
+//menu end
+
+
+
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});
+
+document.querySelectorAll('.disabled').forEach(element => {
+    element.style.pointerEvents = 'none';
+});
+
+
+
+
+const itemsPerPage = 6;
+let currentCategory = 'all';
+let currentPage = 1;
+
+function renderItems() {
+    const allItems = document.querySelectorAll('#item-container .item');
+    const filteredItems = Array.from(allItems).filter(item =>
+        currentCategory === 'all' || item.getAttribute('data-category') === currentCategory
+    );
+
+    allItems.forEach(item => item.classList.add('hidden'));
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const paginatedItems = filteredItems.slice(start, start + itemsPerPage);
+    paginatedItems.forEach(item => item.classList.remove('hidden'));
+
+    renderPagination(filteredItems.length);
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+function renderPagination(totalItems) {
+    const pageCount = Math.ceil(totalItems / itemsPerPage);
+    const pagination = document.getElementById('pagination');
+    pagination.innerHTML = '';
+
+    for (let i = 1; i <= pageCount; i++) {
+        const button = document.createElement('button');
+        button.innerText = i;
+        button.disabled = i === currentPage;
+        button.onclick = () => {
+            currentPage = i;
+            renderItems();
+        };
+        pagination.appendChild(button);
+    }
 }
 
-button:hover {
-    background-color: #45a049;
+function filterItems(category) {
+    currentCategory = category;
+    currentPage = 1;
+    renderItems();
 }
 
-#profile-display {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #e9ecef;
-    border-radius: 8px;
+renderItems();
+
+
+
+$(".carousel").swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        if (direction == 'left') $(this).carousel('next');
+        if (direction == 'right') $(this).carousel('prev');
+    },
+    allowPageScroll: "vertical"
+});
+
+
+
+
+/*
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+}, false);
+document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+    }
+    if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+    }
+    // "U" key 
+    if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+    }
+    if (event.keyCode == 123) {
+        disabledEvent(e);
+    }
+    if (e.ctrlKey && event.keyCode == 67) {
+        disabledEvent(e);
+    }
+}, false);
+
+function disabledEvent(e) {
+    if (e.stopPropagation) {
+        e.stopPropagation();
+    } else if (window.event) {
+        window.event.cancelBubble = true;
+    }
+    e.preventDefault();
+    return false;
 }
+
+
+
+
+
+
+*/
