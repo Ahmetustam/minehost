@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hostperia Hosting | Çok Yakında</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ==== CSS Değişkenleri (Daha Koyu Siyah & Kurumsal Vurgu) ==== */
+:root {
+  --bg-color: #000000; /* Saf Siyah */
+  --card-bg: #0c0c0c;
+  --text-color: #f1f1f1;
+  --primary-color: #007bff; /* Kurumsal Mavi */
+  --secondary-color: #a0a0a0;
+  --border-color: #222222;
+  --accent-light: #52aaff;
+  --shadow-dark: 0 4px 15px rgba(0, 0, 0, 0.8);
+  --error-color: #dc3545; /* Kırmızı/Hata */
+  --success-color: #28a745; /* Yeşil/Başarılı */
+}
+
+/* ==== GENEL STİL ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Loader */
+.loader-bg {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 45px;
+    height: 45px;
+    border: 4px solid var(--primary-color);
+    border-left-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s cubic-bezier(0.5, 0.25, 0.5, 0.75) infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==== ANA MERKEZ İÇERİK ==== */
+.main {
+  position: relative;
+  z-index: 20;
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 80px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Hosting Adı */
+.title {
+  font-size: 4.5em;
+  font-weight: 900;
+  color: var(--text-color);
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+  animation: fadeInDown 1s ease forwards;
+}
+
+.tagline {
+  font-size: 1.5em;
+  color: var(--accent-light);
+  font-weight: 500;
+  margin-bottom: 50px;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+/* Ortak Bölüm Stilleri */
+section {
+    width: 100%;
+    margin-top: 60px;
+    padding: 30px 0;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    display: inline-block;
+    animation: slideInLeft 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* Kartlar */
+.platform-grid, .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color); 
+    border-radius: 8px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-dark);
+    animation: fadeInUp 1.8s ease forwards;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-light);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.card h3 {
+    color: var(--text-color);
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card h3 i {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 1.4em;
+}
+
+.card p {
+    color: var(--secondary-color);
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+/* === VDS/MAKİNE KABİNİ BÖLÜMÜ === */
+.server-section {
+    background: #080808;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 40px 30px;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.1);
+}
+
+.server-cabinet {
+    width: 280px; /* Kabin genişliği artırıldı */
+    height: 380px; /* Kabin yüksekliği artırıldı */
+    background: #111;
+    border: 3px solid var(--border-color);
+    border-radius: 6px;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    animation: pulseGlow 4s infinite alternate;
+    padding: 10px;
+}
+
+/* Makine Üniteleri (Server Units) */
+.server-unit {
+    width: 100%;
+    height: 60px; /* Yüksekliği artırıldı */
+    margin-bottom: 15px;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.unit-label {
+    color: var(--secondary-color);
+}
+
+.unit-status {
+    display: flex;
+    align-items: center;
+}
+
+.unit-status .led {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 0 4px;
+}
+
+/* Özel Makine Birimleri */
+.unit-core {
+    background: #151515;
+    border: 1px solid var(--primary-color);
+}
+
+.unit-core .led { 
+    background: var(--primary-color); 
+    box-shadow: 0 0 8px var(--primary-color); 
+    animation: ledFlash 2s infinite; 
+}
+
+.unit-security .led { 
+    background: var(--success-color); 
+    box-shadow: 0 0 8px var(--success-color); 
+    animation: ledFlash 3s infinite reverse; 
+}
+
+.unit-storage .led { 
+    background: #ffc107; 
+    box-shadow: 0 0 8px #ffc107; 
+}
+
+.unit-access .led { 
+    background: var(--error-color); 
+    box-shadow: 0 0 8px var(--error-color); 
+    animation: ledFlash 1.5s infinite; 
+}
+
+.server-features {
+    flex: 1;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.server-features ul {
+    list-style: none;
+}
+
+.server-features li {
+    font-size: 1.1em;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    color: var(--secondary-color);
+}
+
+.server-features li strong {
+    color: var(--accent-light);
+    font-weight: 700;
+    display: inline-block;
+    min-width: 120px;
+}
+
+/* Animasyonlar */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 15px rgba(0, 123, 255, 0.1); }
+    100% { box-shadow: 0 0 25px rgba(0, 123, 255, 0.4); }
+}
+
+@keyframes ledFlash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .server-section {
+        flex-direction: column;
+    }
+    .server-cabinet {
+        margin-bottom: 40px;
+        width: 100%;
+        max-width: 350px;
+    }
+    .server-features {
+        padding-left: 0;
+        text-align: center;
+    }
+    .server-features li strong {
+        display: block;
+        min-width: unset;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 3.5em; }
+}
+</style>
+
+</head>
+<body>
+
+<div class="loader-bg" id="loader">
+  <div class="loader"></div>
+</div>
+
+<main class="main">
+
+  <h1 class="title">HOSTPERIA</h1>
+  <p class="tagline">Yeni Nesil Oyun ve Uygulama Hosting Deneyimi.</p>
+
+  <div class="status-bar" style="background: var(--primary-color); color: var(--bg-color); font-weight: 700; padding: 15px; border-radius: 4px; max-width: 700px; margin: 0 auto 50px;">
+    <i class="fas fa-exclamation-circle" style="margin-right: 10px;"></i>
+    Açılış Yakın! Güçlü Altyapımız Çok Yakında Hizmetinizde.
+  </div>
+  
+  <section class="founders-section" style="opacity: 0; animation: fadeInUp 2s ease forwards;">
+      <h2 style="color: var(--text-color); border-bottom: none; margin-bottom: 20px;">Kurucularımız</h2>
+      <div class="founder-list" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: 1.2em; font-weight: 600; color: var(--primary-color);">
+          <div>Ahmet K.</div>
+          <div>Cemalettin S.</div>
+          <div>Ender K.</div>
+      </div>
+  </section>
+
+  <section class="server-section">
+    
+    <div class="server-cabinet">
+        <div class="server-unit unit-core">
+            <span class="unit-status"><span class="led"></span> <span style="color: var(--primary-color);">E5 CPU Cluster</span></span>
+            <span class="unit-label">4. Gen İşlemci</span>
+        </div>
+
+        <div class="server-unit unit-security">
+            <span class="unit-status"><span class="led"></span> <span style="color: var(--success-color);">DDOS Firewall</span></span>
+            <span class="unit-label">7/24 Koruma Aktif</span>
+        </div>
+
+        <div class="server-unit unit-storage">
+            <span class="unit-status"><span class="led"></span> <span style="color: #ffc107;">256 GB ECC RAM</span></span>
+            <span class="unit-label">Yüksek Kapasite</span>
+        </div>
+        
+        <div class="server-unit unit-access">
+            <span class="unit-status"><span class="led"></span> <span style="color: var(--error-color);">Pterodactyl Node</span></span>
+            <span class="unit-label">Konteyner Erişimi</span>
+        </div>
+        
+        <div class="server-unit" style="height: 30px; background: #080808; border-color: #111;"></div>
+        <div class="server-unit" style="height: 30px; background: #080808; border-color: #111;"></div>
+        <div class="server-unit" style="height: 30px; background: #080808; border-color: #111;"></div>
+
+    </div>
+    
+    <div class="server-features">
+        <h2 style="border-bottom: 1px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 20px; font-size: 1.8em; color: var(--text-color); animation: none; opacity: 1; transform: none;">Güçlü Altyapımızın Detayları</h2>
+        <ul>
+            <li><strong>İşlemci:</strong> Intel Xeon E5 v4 Serisi</li>
+            <li><strong>RAM Kapasitesi:</strong> 256 GB (ECC)</li>
+            <li><strong>Panel:</strong> Tam Entegre Pterodactyl</li>
+            <li><strong>Güvenlik:</strong> Gelişmiş DDOS Koruması</li>
+            <li><strong>Erişim:</strong> %99.9 Uptime Garantisi</li>
+        </ul>
+    </div>
+  </section>
+
+  <section id="platform">
+    <h2><i class="fas fa-tachometer-alt"></i> Yönetim ve Performans</h2>
+    <div class="platform-grid">
+      
+      <div class="card" style="animation-delay: 0.1s;">
+        <h3><i class="fas fa-feather-alt"></i> Pterodactyl Panel Entegrasyonu</h3>
+        <p>Kullanıcı dostu, modern Pterodactyl panel ile sunucularınızı kolayca yönetin. Anlık kontrol, konsol erişimi ve dosya yönetimi elinizin altında.</p>
+      </div>
+
+      <div class="card" style="animation-delay: 0.2s;">
+        <h3><i class="fas fa-plug"></i> 7/24 Kesintisiz Sunucu</h3>
+        <p>Yüksek donanımlı sunucularımızla kesintisiz %99.9 Uptime garantisi. Projelerinizin erişilebilirliği her zaman önceliğimizdir.</p>
+      </div>
+
+      <div class="card" style="animation-delay: 0.3s;">
+        <h3><i class="fas fa-boxes"></i> Geniş Egg Yelpazesi</h3>
+        <p>Minecraft, DC Bot, Nginx, Teamspeak 3 ve ihtiyacınız olan tüm özel uygulama egg'leri tek bir platformda.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="services">
+    <h2><i class="fas fa-server"></i> Servislerimizden Örnekler</h2>
+    <div class="feature-grid">
+
+      <div class="card" style="animation-delay: 0.4s;">
+        <h3><i class="fas fa-gamepad"></i> Minecraft Hosting</h3>
+        <p>Özel optimize edilmiş egg'ler ile Vanilla, Spigot, Paper ve modlu sunucular için düşük gecikmeli, yüksek performans.</p>
+      </div>
+
+      <div class="card" style="animation-delay: 0.5s;">
+        <h3><i class="fab fa-discord"></i> Discord Bot Hosting</h3>
+        <p>Node.js, Python botlarınız için güvenilir, 7/24 açık kalacak kararlı bir ortam sunuyoruz. Botlarınız asla uyumaz.</p>
+      </div>
+      
+      <div class="card" style="animation-delay: 0.6s;">
+        <h3><i class="fas fa-globe"></i> Web & Proxy (Nginx)</h3>
+        <p>Küçük web projeleriniz veya proxy çözümleriniz için Nginx tabanlı hızlı ve güvenli konteynerlar.</p>
+      </div>
+      
+      <div class="card" style="animation-delay: 0.7s;">
+        <h3><i class="fas fa-headset"></i> TeamSpeak 3</h3>
+        <p>Düşük gecikme ile sesli iletişim sunan kararlı TeamSpeak 3 sunucuları kurma imkanı.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+    &copy; <span id="current-year"></span> Hostperia Hosting Inc. | Tüm Hakları Saklıdır.
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Yükleme Ekranı Kontrolü
+        const loader = document.getElementById('loader');
+        setTimeout(() => {
+            loader.classList.add('loader-hidden');
+        }, 1000); 
+
+        // Telif Yılı
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+</script>
+
+</body>
+</html>
